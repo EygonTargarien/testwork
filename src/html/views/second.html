@@ -1,0 +1,32 @@
+<% var data = {
+	title: "Второй заголовок | Проект",
+	author: "Harrix next"
+}; %>
+
+<%= _.template(require('../includes/common/head.html').default)(data) %>
+
+<div class="wrapper">
+	<header class="wrapper__header">
+		<%= _.template(require('../includes/header.html').default)(data) %>
+	</header>
+
+
+	<main class="wrapper__main">
+
+		<section class="section">
+			<div class="container">
+				<div class="title">SECOND страница.</div>
+
+				<div class="block js-hide" style="display: none">HIDE BLOCK!!</div>
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="wrapper__footer">
+		<%= _.template(require('../includes/footer.html').default)(data) %>
+	</footer>
+</div>
+
+
+<%= _.template(require('../includes/common/foot.html').default)(data) %>

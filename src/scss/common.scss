@@ -1,0 +1,17 @@
+body {
+	scroll-behavior: smooth;
+	&.has-freeze {
+		overflow: hidden;
+	}
+}
+html{
+	scroll-behavior: smooth;
+}
+
+.container {
+	max-width: 1280px;
+	padding: 0 10px;
+	width: 100%;
+	margin: 0 auto;
+}
+
