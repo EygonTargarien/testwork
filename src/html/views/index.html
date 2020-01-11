@@ -2,38 +2,49 @@
   title: "Заголовок | Проект",
   author: "Harrix"
 }; %>
-
-
 <%
 let cardList = [
 	{
-		title: 'tittle1111'
+		img: 'img/image_1.png',
+		title: 'Do you know how to level a cake?',
+		text: 'After years of cake successes and flops, I’m confident in this homemade vanilla cake. During my recipe testing, I combined my white cake recipe and naked cake recipe. These are two reader favorites and I knew they’d be the best starting point.'
 	},
 	{
-		title: 'tittle2222'
+		img: 'img/image_2.png',
+		title: 'Vanilla Cake Success Tips',
+		text: 'I always eyeball the amount of frosting between cake layers, but I measured when I decorated the pictured cake. The vanilla buttercream recipe below yields about 6 cups of frosting. I recommend you use about 1.5 heaping cups of buttercream between each cake layer and reserve the last 3 cups for outside the cake.'
 	},
-	{
-		title: 'tittle3333'
-	}
 ]
 %>
+
 
 <%= _.template(require('../includes/common/head.html').default)(data) %>
 
 <div class="wrapper">
-	<header class="wrapper__header">
-		<%= _.template(require('../includes/header.html').default)(data) %>
-	</header>
-
-
 	<main class="wrapper__main">
 
-		<section class="section">
+		<section class="promo">
+			<div class="promo__wrap">
+				<div class="promo__cnt">
+					<div class="promo__info">GET STARTED WITHIN 2 MINUTES</div>
+					<div class="promo__title">Learn How To Bake In
+						5 Easy Steps</div>
+					<div class="promo__text">No doubt, you need more one pot dinners in your life like this easy Bosnian-style chicken and rice. This recipe is made all over the world with countless variations on the theme.</div>
+				</div>
+
+				<div class="promo__form">
+					<%= _.template(require('../includes/form.html').default)() %>
+				</div>
+
+				<div class="promo__cnt promo__cnt--empty"></div>
+			</div>
+		</section>
+
+		<section class="card">
 			<div class="container">
-				<div class="title">Первая страница.</div>
-				<ul>
+				<ul class="card__list">
 					<% cardList.forEach(function(card) { %>
-					<li>
+					<li class="card__item">
 						<%= _.template(require('../includes/card.html').default)(card) %>
 					</li>
 					<% }); %>
@@ -42,10 +53,6 @@ let cardList = [
 		</section>
 
 	</main>
-
-	<footer class="wrapper__footer">
-		<%= _.template(require('../includes/footer.html').default)(data) %>
-	</footer>
 </div>
 
 <%= _.template(require('../includes/common/foot.html').default)(data) %>

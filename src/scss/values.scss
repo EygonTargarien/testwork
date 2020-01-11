@@ -1,5 +1,5 @@
 //colors
-$c_main: #313131;
+$c_main: #000;
 $c_main_light_1: #414141;
 $c_main_light_2: #525252;
 $c_main_light_3: #9f9f9f;
@@ -14,8 +14,8 @@ $c_bg_light: #f9f9f9;
 $c_border: #ccc;
 $c_border_light: rgba(220, 220, 220, 0.41);
 
-$c_text: #313131;
-$c_text_light: rgba(0, 0, 0, 0.3);
+$c_text: #000;
+$c_text_light: #7A7A7A;
 $c_text_dark: #000;
 
 $c_error: #ca3e47;
@@ -23,8 +23,8 @@ $c_error_dark: #a2333c;
 
 
 //fonts
-$f_main: 'Roboto', serif;
-$f_alt: 'Roboto Condensed', sans-serif;
+$f_main:  'Open Sans', serif;
+$f_alt:  'Open Sans', sans-serif;
 
 
 //breakpoints

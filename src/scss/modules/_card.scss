@@ -1,0 +1,76 @@
+.card{
+	padding: 70px 0;
+	&__item{
+		margin-bottom: 50px;
+		&:nth-child(2n){
+			.card__img{
+				order: 1;
+				@media(max-width: $def){
+					order: -1;
+				}
+			}
+			.card__cnt{
+				padding: 0 73px 0 0;
+				@media(max-width: $def){
+					padding: 0 0 0 52px;
+				}
+				@media(max-width: $md){
+					padding: 0;
+				}
+			}
+		}
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+	&__wrap{
+		display: flex;
+		align-items: stretch;
+		@media(max-width: $md){
+			flex-wrap: wrap;
+		}
+
+	}
+	&__img{
+		max-width: 627px;
+		width: 100%;
+		line-height: 0;
+		flex-shrink: 0;
+		@media(max-width: $def){
+			width: 50%;
+		}
+		@media(max-width: $md){
+			width: 100%;
+			margin-bottom: 20px;
+		}
+	}
+
+	&__cnt{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 0 0 0 73px;
+		@media(max-width: $def){
+			padding: 0 0 0 52px;
+		}
+		@media(max-width: $md){
+			padding: 0;
+		}
+	}
+	&__title{
+		font-weight: bold;
+		font-size: 22px;
+		line-height: 34px;
+		letter-spacing: -0.5px;
+		color: $c_text;
+		margin-bottom: 30px;
+		@media(max-width: $md){
+			margin-bottom: 20px;
+		}
+	}
+	&__text{
+		color: $c_text_light;
+		font-size: 16px;
+		line-height: 28px;
+	}
+}

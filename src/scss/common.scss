@@ -1,5 +1,6 @@
 body {
 	scroll-behavior: smooth;
+	font-family: $f_main;
 	&.has-freeze {
 		overflow: hidden;
 	}
@@ -9,9 +10,12 @@ html{
 }
 
 .container {
-	max-width: 1280px;
+	max-width: 1087px;
 	padding: 0 10px;
 	width: 100%;
 	margin: 0 auto;
+	@media(min-width: $md) and (max-width: $def){
+		padding: 0 30px;
+	}
 }
 

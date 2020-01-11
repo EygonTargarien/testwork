@@ -1,12 +1,6 @@
 import $ from 'jquery';
-
-import eventHide from './modules/hide.js';
+// import Vue from 'vue';
 
 $(function () {
 
-	//init hideBlock
-	let $element = $('.js-hide');
-	if ($element.length) {
-		eventHide($element);
-	}
 });
